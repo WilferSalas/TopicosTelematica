@@ -1,0 +1,16 @@
+extends template/template.jade
+block main
+    div(id="vue-app")
+        div(class="proyect_1")
+          div(class="worldContent")
+            div(class="mundo")
+                div(class="mapa")
+          div(class="titleContent")
+            div(class="titlePage1")
+              h1 ¡Tú ubicación!
+        div(data-role="page" id="mapPage")
+        div(id="map")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5Lw093i1GDjUPXg0gn_0Xl7qvgNdOCkA" async defer)
+    //script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCafiyARPG-bfu_qLRVSvl3Dqp9VORXtsQ&callback=initMap")
+    //script(type="text/javascript" src="js/maps.js")
+    script(type="text/javascript" src="../js/mapsGeocode.js")

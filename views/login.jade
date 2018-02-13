@@ -1,0 +1,47 @@
+extends template/template.jade
+block main 
+  div(id="vue-app")
+    block main
+      div(class="login")
+        div(class="titleLogin")
+          h1 Inicia sesion
+        div(class="loginContainerOne")
+          div(class="loginFormBox")
+            form(action="login")
+              label Usuario
+              input(type="text" name="user" placeholder="Ingresa tu usuario")
+              label Contrasena
+              input(type="password" name="password" placeholder="Ingresa tu contrasena")
+              input(type="submit" name="loginCompleted" value="Ingresa")
+              a(href="#")
+                p ¿Olvidaste tu contrasena?
+                a(href="register.html")
+                  p ¿No tienes una cuenta? ¡Registrate!
+        div(class="loginContainer")
+          div(class="loginLeft")
+            h2 Bienvenido
+          div(class="loginRight")
+            div(class="formBox")
+              form(id="login" method='post')
+                label Usuario
+                input(type="text" name="user" placeholder="Ingresa tu contrasena")
+                label Contrasena
+                input(type="password" name="password" placeholder="Ingresa tu contrasena")
+                input(type="submit" name="loginCompleted" value="Ingresa")
+                a(href="#")
+                  p ¿Olvidaste tu contrasena?
+                  a(href="register.html")
+                    p ¿No tienes una cuenta? ¡Registrate!
+    script(type="text/javascript").
+        // const formLogin = document.querySelector('#login');
+        // const formData = new FormData(formLogin);
+        //
+        // formLogin.addEventListener('submit', event => {
+        //     event.preventDefault();
+        //     fetch('api/signin', {
+        //         method: 'POST',
+        //         body: formData
+        //     })
+        //         .then(res => json())
+        // .then(data => console.log())
+        // })
