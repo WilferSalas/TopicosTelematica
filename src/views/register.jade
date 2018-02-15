@@ -1,4 +1,4 @@
-extends template/template.jade
+extends template/template2.jade
 block main
     div(class="register")
         div(class="titleRegister")
@@ -6,36 +6,36 @@ block main
         div(class="registerContainerOne")
             div(class="registerContainerOne")
                 div(class="registerFormBoxOne")
-                    form(action="register")
-                        label(f) Nombre
-                        input(type="text" name="name" placeholder="Ingresa tu nombre")
-                        label() Apellido
-                        input(type="text" name="lastName" placeholder="Ingresa tu apellido")
-                        label() Usuario
-                        input(type="text" name="userRegister" placeholder="Ingresa un usuario")
+                    form(action="/signup" method="post")
+                        //label() Nombre
+                        //input(type="text" name="text" placeholder="Ingresa tu nombre")
+                        //label() Apellido
+                        //input(type="text" name="lastName" placeholder="Ingresa tu apellido")
+                        label() Email
+                        input(type="email" name="email" placeholder="Ingresa un correo")
                         label() Contrasena
                         input(type="password" name="password" placeholder="Ingresa tu contrasena")
-                        label() Repetir contrasena
-                        input(type="password" name="repeatPassword" placeholder="Ingresa nuevamente tu contrasena")
+                        //label() Repetir contrasena
+                        //input(type="password" name="repeatPassword" placeholder="Ingresa nuevamente tu contrasena")
                         input(type="submit" name="loginCompleted" value="Ingresa")
-                        a(href="login.html")
-                            p(for="registerForm") ¿Ya tienes una cuenta? ¡Inicia sesion aca!
+                        a(href="/")
+                            p() ¿Ya tienes una cuenta? ¡Inicia sesion aca!
         div(class="registerContainer")
             div(class="registerLeft")
                 h2 Bienvenido
             div(class="registerRight")
                 div(class="registerFormBox")
-                    form(action="register")
-                        label() Nombre
-                        input(type="text" name="name" placeholder="Ingresa tu nombre")
-                        label() Apellido
-                        input(type="text" name="lastName" placeholder="Ingresa tu apellido")
-                        label() Usuario
-                        input(type="text" name="userRegister" placeholder="Ingresa un usuario")
+                    form(action="/signup" method="post")
+                        //label() Nombre
+                        //input(type="text" name="name" placeholder="Ingresa tu nombre")
+                        //label() Apellido
+                        //input(type="text" name="lastName" placeholder="Ingresa tu apellido")
+                        label() Correo
+                        input(type="email" name="email" placeholder="Ingresa un usuario")
                         label() Contrasena
                         input(type="password" name="password" placeholder="Ingresa tu contrasena")
-                        label() Repetir contrasena
-                        input(type="password" name="repeatPassword" placeholder="Ingresa nuevamente tu contrasena")
+                        //label() Repetir contrasena
+                        //input(type="password" name="repeatPassword" placeholder="Ingresa nuevamente tu contrasena")
                         input(type="submit" name="loginCompleted" value="Ingresa")
-                        a(href="login.html")
-                            p(for="registerForm") ¿Ya tienes una cuenta? ¡Inicia sesion aca!
+                        a(href="/")
+                            p() ¿Ya tienes una cuenta? ¡Inicia sesion aca!

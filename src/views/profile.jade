@@ -1,0 +1,10 @@
+extends template/template.jade
+block main
+    div(class="profile")
+        div(class="titleProfile")
+            h1 Perfil
+        div(class="profileContainer")
+            p id: #{user._id}
+            p Correo: #{user.local.email}
+            p Contraseña: #{user.local.password}
+            a(href="/logout") Cerrar sesion

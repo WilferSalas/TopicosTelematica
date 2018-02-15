@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="icon" href="../img/tele.png"/>
+    <title>Topicos especiales en Telematica</title>
+  </head>
+  <body>
+    <!--header-->
+    <!--    include ../blocks/header.jade-->
+    <!--    nav(class="menu")-->
+    <!--        include ../blocks/menu.jade-->
+    <main id="content">
+      <div class="login">
+        <div class="titleLogin">
+          <h1>Inicia sesion</h1>
+        </div>
+        <div class="loginContainerOne">
+          <div class="loginFormBox">
+            <form action="login">
+              <label>Usuario</label>
+              <input type="text" name="user" placeholder="Ingresa tu usuario"/>
+              <label>Contrasena</label>
+              <input type="password" name="password" placeholder="Ingresa tu contrasena"/>
+              <input type="submit" name="loginCompleted" value="Ingresa"/><a href="#">
+                <p>¿Olvidaste tu contrasena?</p><a href="register">
+                  <p>¿No tienes una cuenta? ¡Registrate!</p></a></a>
+            </form>
+          </div>
+        </div>
+        <div class="loginContainer">
+          <div class="loginLeft">
+            <h2>Bienvenido</h2>
+          </div>
+          <div class="loginRight">
+            <div class="formBox">
+              <form action="/" method="post">
+                <label>Correo</label>
+                <input type="email" name="email" placeholder="Ingresa tu contrasena"/>
+                <label>Contrasena</label>
+                <input type="password" name="password" placeholder="Ingresa tu contrasena"/>
+                <input type="submit" value="Ingresa"/><a href="#">
+                  <p>¿Olvidaste tu contrasena?</p><a href="/signup">
+                    <p>¿No tienes una cuenta? ¡Registrate!</p></a></a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--script(src="js/app.js")-->
+    <!--  block script-->
+    <footer>
+      <div class="footer">
+        <p>Topicos especiales en Telematica</p>
+        <p>Wilfer Salas Gonzales</p>
+        <p>Universidad EAFIT</p>
+      </div>
+    </footer>
+  </body>
+</html>

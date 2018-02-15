@@ -31,11 +31,7 @@ header label:hover {
   margin: 0;
   list-style: none;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end; }
 
 .menu li a {
@@ -48,24 +44,22 @@ header label:hover {
   header label {
     display: block;
     border: none; }
+
   .menu {
     position: absolute;
     background: #4E94AB;
     width: 70%;
     margin-left: -70%;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
     transition: all 0.5s; }
+
   .menu ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column; }
+
   .menu li {
     border-top: 1px solid #fff; }
+
   #btn-menu:checked ~ .menu {
     margin: 0; } }
-
 .footer {
   width: 100%;
   text-align: center;
@@ -114,7 +108,6 @@ header label:hover {
     padding: 1px;
     border-radius: 1.5em;
     opacity: 0.5; } }
-
 .mapa {
   top: 0;
   right: 0;
@@ -126,7 +119,6 @@ header label:hover {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  -webkit-box-shadow: -30px -20px 0 0 rgba(0, 0, 0, 0.1) inset;
   box-shadow: -30px -20px 0 0 rgba(0, 0, 0, 0.1) inset;
   background: url(../img/mapa.png);
   background-size: cover;
@@ -137,7 +129,6 @@ header label:hover {
     background-position: left center; }
   to {
     background-position: -396px center; } }
-
 #map {
   width: 100%;
   height: 500px; }
@@ -167,7 +158,6 @@ header label:hover {
   background: #fff;
   margin: 0 auto;
   border: 2px solid #fff;
-  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); }
 
 .loginFormBox {
@@ -176,10 +166,8 @@ header label:hover {
   background: #fff;
   margin: 0 auto;
   border: 2px solid #fff;
-  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   padding: 80px 40px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .loginContainer .loginLeft {
@@ -192,7 +180,6 @@ header label:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .loginLeft h2 {
@@ -202,13 +189,11 @@ header label:hover {
   float: right;
   width: 50%;
   height: 500px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .formBox {
   width: 100%;
   padding: 80px 40px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 500px;
   background: #fff; }
@@ -222,14 +207,14 @@ header label:hover {
   width: 100%;
   margin-bottom: 20px; }
 
-.formBox input[type="text"], .loginFormBox input[type="text"], .formBox input[type="password"], .loginFormBox input[type="password"] {
+.formBox input[type="email"], .loginFormBox input[type="email"], .formBox input[type="password"], .loginFormBox input[type="password"] {
   border: none;
   border-bottom: 2px solid;
   outline: none;
   height: 40px;
   color: #4E94AB; }
 
-.formBox input[type="text"]:focus, .loginFormBox input[type="text"]:focus, .formBox input[type="password"]:focus, .loginFormBox input[type="password"]:focus {
+.formBox input[type="email"]:focus, .loginFormBox input[type="email"]:focus, .formBox input[type="password"]:focus, .loginFormBox input[type="password"]:focus {
   border-bottom: 2px solid #262626; }
 
 .formBox input[type="submit"], .loginFormBox input[type="submit"] {
@@ -254,9 +239,9 @@ header label:hover {
 @media (max-width: 768px) {
   .loginContainer {
     display: none; }
+
   .loginContainerOne {
     display: block; } }
-
 .register {
   padding-bottom: 50px;
   background: url("../img/redBlur.jpg") no-repeat center center fixed;
@@ -290,7 +275,6 @@ header label:hover {
   background: #fff;
   margin: 0 auto;
   border: 2px solid #fff;
-  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); }
 
 .registerContainer .registerLeft {
@@ -303,7 +287,6 @@ header label:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .registerLeft h2 {
@@ -313,13 +296,11 @@ header label:hover {
   float: right;
   width: 50%;
   height: 630px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .registerFormBox {
   width: 100%;
   padding: 80px 40px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 630px;
   background: #fff; }
@@ -330,24 +311,22 @@ header label:hover {
   background: #fff;
   margin: 0 auto;
   border: 2px solid #fff;
-  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   padding: 80px 40px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .registerFormBox input, .registerFormBoxOne input {
   width: 100%;
   margin-bottom: 20px; }
 
-.registerFormBox input[type="text"], .registerFormBoxOne input[type="text"], .registerFormBox input[type="password"], .registerFormBoxOne input[type="password"] {
+.registerFormBox input[type="email"], .registerFormBoxOne input[type="email"], .registerFormBox input[type="password"], .registerFormBoxOne input[type="password"] {
   border: none;
   border-bottom: 2px solid;
   outline: none;
   height: 40px;
   color: #4E94AB; }
 
-.registerFormBox input[type="text"]:focus, .registerFormBox input[type="password"]:focus {
+.registerFormBox input[type="email"]:focus, .registerFormBox input[type="password"]:focus {
   border-bottom: 2px solid #262626; }
 
 .registerFormBox input[type="submit"], .registerFormBoxOne input[type="submit"] {
@@ -372,9 +351,9 @@ header label:hover {
 @media (max-width: 768px) {
   .registerContainer {
     display: none; }
+
   .registerContainerOne {
     display: block; } }
-
 .about {
   padding-bottom: 50px;
   background: url("../img/downBlur.jpg") no-repeat center center fixed;
@@ -407,7 +386,6 @@ header label:hover {
   background: #fff;
   margin: 0 auto;
   border: 2px solid #fff;
-  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); }
 
 .aboutContainer p {
@@ -420,3 +398,42 @@ header label:hover {
 
 .soon h1 {
   padding-top: 200px; }
+
+.profile {
+  padding-bottom: 50px;
+  background: url("../img/profileBlur.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.titleProfile {
+  text-align: center;
+  padding: 50px 0 20px; }
+
+.titleProfile h1 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-transform: uppercase; }
+
+.profile body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  font-family: sans-serif; }
+
+.profileContainer {
+  width: 80%;
+  height: 350px;
+  background: #fff;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); }
+
+.profileContainer p {
+  margin: 50px; }
+
+/*# sourceMappingURL=main.css.map */

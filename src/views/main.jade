@@ -1,0 +1,72 @@
+extends template/template.jade
+block main
+    div(id="vue-app")
+        div(class="proyect_1")
+            div(class="worldContent")
+                div(class="mundo")
+                    div(class="mapa")
+            div(class="titleContent")
+                div(class="titlePage1")
+                    h1 ¡Tú ubicación!
+        div(data-role="page" id="mapPage")
+        div(id="map") ${geocode}
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5Lw093i1GDjUPXg0gn_0Xl7qvgNdOCkA" async defer)
+    //script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCafiyARPG-bfu_qLRVSvl3Dqp9VORXtsQ&callback=initMap")
+    //script(type="text/javascript" src="js/maps.js")
+    script(type="text/javascript").
+        var directionsDisyplay;
+        var directionsMap;
+        var z = document.getElementById("map");
+        var start;
+        var end;
+
+        function getDirectionsLocation() {
+            console.log("getDirectionsLocation");
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showDirectionsPosition);
+            } else {
+                z.innerHTML = "La geolocalizacion no esta soportada por este navegador"
+            }
+        }
+
+        function showDirectionsPosition(position) {
+            console.log('showMapPosition');
+            directionsLatitude = position.coords.latitude;
+            directionsLongitude = position.coords.longitude;
+            myDirectionsLatLng = new google.maps.LatLng(directionsLatitude, directionsLongitude);
+            //myLastD
+            getDirections();
+        }
+
+        function getDirections() {
+            console.log('getDirections');
+            directionsDisyplay = new google.maps.DirectionsRenderer();
+            start = new google.maps.LatLng(directionsLatitude, directionsLongitude);
+            var mapOptions = {
+                zoom: 12,
+                center: start,
+                title: "estas aca"
+            };
+            directionsMap = new google.maps.Map(document.getElementById('map'), mapOptions);
+            directionsDisyplay.setMap(directionsMap);
+            calcRoute();
+        }
+
+        function calcRoute() {
+            console.log('calcRoute');
+            var directionsService = new google.maps.DirectionsService();
+            start = myDirectionsLatLng;
+            end = "EAFIT";
+            var request = {
+                origin: start,
+                destination: end,
+                travelMode: google.maps.TravelMode.DRIVING
+            };
+            directionsService.route(request, function (result, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisyplay.setDirections(result);
+                }
+            });
+        }
+
+        getDirectionsLocation();

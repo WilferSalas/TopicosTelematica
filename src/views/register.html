@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="icon" href="../img/tele.png"/>
+    <title>Topicos especiales en Telematica</title>
+  </head>
+  <body>
+    <!--header-->
+    <!--    include ../blocks/header.jade-->
+    <!--    nav(class="menu")-->
+    <!--        include ../blocks/menu.jade-->
+    <main id="content">
+      <div class="register">
+        <div class="titleRegister">
+          <h1>Registrate</h1>
+        </div>
+        <div class="registerContainerOne">
+          <div class="registerContainerOne">
+            <div class="registerFormBoxOne">
+              <form action="/signup" method="post">
+                <!--label() Nombre-->
+                <!--input(type="text" name="text" placeholder="Ingresa tu nombre")-->
+                <!--label() Apellido-->
+                <!--input(type="text" name="lastName" placeholder="Ingresa tu apellido")-->
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Ingresa un correo"/>
+                <label>Contrasena</label>
+                <input type="password" name="password" placeholder="Ingresa tu contrasena"/>
+                <!--label() Repetir contrasena-->
+                <!--input(type="password" name="repeatPassword" placeholder="Ingresa nuevamente tu contrasena")-->
+                <input type="submit" name="loginCompleted" value="Ingresa"/><a href="login.html">
+                  <p>¿Ya tienes una cuenta? ¡Inicia sesion aca!</p></a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="registerContainer">
+          <div class="registerLeft">
+            <h2>Bienvenido</h2>
+          </div>
+          <div class="registerRight">
+            <div class="registerFormBox">
+              <form action="/signup" method="post">
+                <!--label() Nombre-->
+                <!--input(type="text" name="name" placeholder="Ingresa tu nombre")-->
+                <!--label() Apellido-->
+                <!--input(type="text" name="lastName" placeholder="Ingresa tu apellido")-->
+                <label>Correo</label>
+                <input type="email" name="email" placeholder="Ingresa un usuario"/>
+                <label>Contrasena</label>
+                <input type="password" name="password" placeholder="Ingresa tu contrasena"/>
+                <!--label() Repetir contrasena-->
+                <!--input(type="password" name="repeatPassword" placeholder="Ingresa nuevamente tu contrasena")-->
+                <input type="submit" name="loginCompleted" value="Ingresa"/><a href="login">
+                  <p>¿Ya tienes una cuenta? ¡Inicia sesion aca!</p></a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--script(src="js/app.js")-->
+    <!--  block script-->
+    <footer>
+      <div class="footer">
+        <p>Topicos especiales en Telematica</p>
+        <p>Wilfer Salas Gonzales</p>
+        <p>Universidad EAFIT</p>
+      </div>
+    </footer>
+  </body>
+</html>
